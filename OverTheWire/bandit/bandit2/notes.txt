@@ -1,0 +1,6 @@
+#EL SIGUIENTE NIVEL EL FLAG ESTA EN EN UN ARCHIVO CON ESPACIOS EN SU NOMBRE. ESTO TIENE VARIAS FORMAS DE RESOLUCION:
+# 1) cat "NOMBRE DE ARCHIVO CON ESPACIOS"
+# 2) sed "s/^ *//;s/ *$//;s/ \{1,\}/ /g" "NOMBRE DE ARCHIVO CON ESPACIOS"
+# ene ste ejemplo numero dos la herramienta sed que es un editor de texto remueve todos los espacio y como resultado aroja el flag (AQUI AUN NO ME QUEDA CLARO EL PORQUE A MENOS QUE SEA SU STDOUT DE CONFIRMACION DE EJECUCION CORRECTA, HAY QUE LEER MAS)
+# 3) awk '{print}' "NOMBRE DE ARCHIVO CON ESPACIOS"
+

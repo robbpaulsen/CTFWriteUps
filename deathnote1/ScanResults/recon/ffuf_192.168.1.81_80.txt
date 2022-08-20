@@ -1,0 +1,14 @@
+[2K.hta.html               [Status: 403, Size: 277, Words: 20, Lines: 10, Duration: 1ms][0m
+[2K.htaccess.html          [Status: 403, Size: 277, Words: 20, Lines: 10, Duration: 1ms][0m
+[2K.htpasswd.html          [Status: 403, Size: 277, Words: 20, Lines: 10, Duration: 1ms][0m
+[2K.html                   [Status: 403, Size: 277, Words: 20, Lines: 10, Duration: 1ms][0m
+[2K.hta                    [Status: 403, Size: 277, Words: 20, Lines: 10, Duration: 63ms][0m
+[2K                        [Status: 200, Size: 197, Words: 23, Lines: 10, Duration: 136ms][0m
+[2K.htaccess               [Status: 403, Size: 277, Words: 20, Lines: 10, Duration: 139ms][0m
+[2K.htpasswd               [Status: 403, Size: 277, Words: 20, Lines: 10, Duration: 212ms][0m
+[2Kindex.html              [Status: 200, Size: 197, Words: 23, Lines: 10, Duration: 0ms][0m
+[2Kindex.html              [Status: 200, Size: 197, Words: 23, Lines: 10, Duration: 1ms][0m
+[2Kmanual                  [Status: 301, Size: 313, Words: 20, Lines: 10, Duration: 0ms][0m
+[2Krobots.txt              [Status: 200, Size: 68, Words: 11, Lines: 5, Duration: 0ms][0m
+[2Kwordpress               [Status: 301, Size: 316, Words: 20, Lines: 10, Duration: 0ms][0m
+[2Kserver-status           [Status: 403, Size: 277, Words: 20, Lines: 10, Duration: 3030ms][0m

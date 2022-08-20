@@ -1,0 +1,22 @@
+# ESTE NIVEL TIENE EL MISMO RETO QUE EL ANTERIOR PERO NOS ESCONDE EL ARCHIVO DENTRO DE OTROS SUBDIRECTORIOS DE "inhere" , NOS INDICA QUE SOLO 1 CONTIENE EL FLAG
+# LA UTILIDAD wc (WORD COUNT) PUED CONTAR LINEAS DE 1 SOLO ARCHIVO O DE MULTIPLES ARCHIVOS EN TODO UN DIRECTORIO, SE RESUELVE ASI:
+
+# $ wc -l inhere/*
+
+# DA ESTE RESULTADO:
+
+#  0 inhere/-file00
+#  0 inhere/-file01
+#  0 inhere/-file02
+#  0 inhere/-file03
+ # 0 inhere/-file04
+ # 0 inhere/-file05
+ # 0 inhere/-file06
+ # 1 inhere/-file07
+ # 0 inhere/-file08
+ # 0 inhere/-file09
+#  1 total
+
+# SOLO EL EL FILE07 CONTIENE 1 LINEAS AIS QUE ES EL QUE NECESITAMOS
+
+# $ cat inhere/-file07

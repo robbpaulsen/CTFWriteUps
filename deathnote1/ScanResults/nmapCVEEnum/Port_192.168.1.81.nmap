@@ -1,0 +1,10 @@
+# Nmap 7.92 scan initiated Fri Jul 22 09:46:46 2022 as: /usr/bin/nmap -T4 --max-retries 1 --max-scan-delay 20 --open -oN nmap/Port_192.168.1.81.nmap --system-dns --stats-every 1s 192.168.1.81
+Nmap scan report for 192.168.1.81
+Host is up (0.000089s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+MAC Address: 08:00:27:CF:72:AF (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Fri Jul 22 09:46:46 2022 -- 1 IP address (1 host up) scanned in 0.27 seconds

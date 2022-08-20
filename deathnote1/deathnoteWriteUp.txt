@@ -1,0 +1,76 @@
+PERFORMED ARP-SCAN 
+# arp-scan  -l    
+Interface: eth0, type: EN10MB, MAC: 7c:10:c9:45:b3:e5, IPv4: 192.168.1.75
+Starting arp-scan 1.9.7 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.1.81    08:00:27:cf:72:af       PCS Systemtechnik GmbH
+192.168.1.66    0c:b5:27:e3:8f:47       HUAWEI TECHNOLOGIES CO.,LTD
+192.168.1.67    74:ec:b2:4c:8a:e8       (Unknown)
+192.168.1.71    5c:c1:d7:d8:c2:d4       (Unknown)
+192.168.1.64    08:84:9d:27:66:79       Amazon Technologies Inc.
+192.168.1.77    c0:23:8d:7b:65:36       (Unknown)
+192.168.1.254   e4:26:86:8e:fc:40       (Unknown)
+192.168.1.69    74:59:09:bb:84:09       HUAWEI TECHNOLOGIES CO.,LTD
+
+THE .81 ADDRESS IS THE ONLYONE UNKNOWN TO ME, ENUM TIME!
+# nmap -sX -T4 -n -Pn -p- -D 192.168.1.254,8.8.8.8,1.1.1.1,ME 192.168.1.81 -o nmapT4nPnpD.xml
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 5e:b8:ff:2d:ac:c7:e9:3c:99:2f:3b:fc:da:5c:a3:53 (RSA)
+|   256 a8:f3:81:9d:0a:dc:16:9a:49:ee:bc:24:e4:65:5c:a6 (ECDSA)
+|_  256 4f:20:c3:2d:19:75:5b:e8:1f:32:01:75:c2:70:9a:7e (ED25519)
+80/tcp open  http    Apache httpd 2.4.38 ((Debian))
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Apache/2.4.38 (Debian)
+MAC Address: 08:00:27:CF:72:AF (Oracle VirtualBox virtual NIC)
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.6
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+PORTS 22, 80 OPENED, WITH LEAKED KEYS AND CERTIFICATES
+
+PORTS 22, 80 OPENED, WITH LEAKED KEYS AND CERTIFICATES
+
+IN THE BROWSER WHEN TRYING TO TO GET IN 192.168.1.81 IT REDIRECTS
+TO ANOTHER FIX ADDRESS:
+http://deathnote.vuln/wordpress/
+* BUT IT CANT DISPLAY ANYTHING SO TO RESOLVE THE REDIRECTION WE NEED TO ADD A PART OF THE ADDRESS TO OUR /etc/hosts file.
+
+$ nano /etc/hosts
+
+............
+ADD THIS LINES --> 192.168.1.81   deathnote/vuln
+
+USER ENUM THROWS ADMIN AND USER "kira" 
+PASSWORD:  iamjustic3
+
+** ALWAYS LOOK FIRST FOR THE EASIEST THINGS, LIKE VISIT THE robots.txt PLACE, ITS ALWAYS IN THE SAME PLACE
+
+*  visit http://deathnote.vuln/robots.txt
+* THEN MAKE A wget to the address
+* IT OUTPUTS THIS MESSAGE:
+
+"fuck it my dad 
+added hint on /important.jpg
+
+ryuk please delete it"
+
+* NOW WE REPLACE THE "/robots.txt" for "/important.jpg"
+
+INSPECTING THE IMAGE BECAUSE IT CANT BE DISPLAYED AND I THINK ITS BECAUSE IT NEEDS TO BE DISPLAYED ON TERMINAL WITH "curl"
+
+curl http://deathnote.vuln/important.jpg
+
+"i am Soichiro Yagami, light's father
+i have a doubt if L is true about the assumption that light is kira
+
+i can only help you by giving something important
+
+login username : user.txt
+i don't know the password.
+find it by yourself 
+but i think it is in the hint section of site"

@@ -1,0 +1,33 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.1.81
++ Target Hostname:    192.168.1.81
++ Target Port:        80
++ Start Time:         2022-07-22 09:47:41 (GMT-5)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.38 (Debian)
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Server may leak inodes via ETags, header found with file /, inode: c5, size: 5cb285991624e, mtime: gzip
++ Allowed HTTP Methods: GET, POST, OPTIONS, HEAD 
++ OSVDB-3092: /manual/: Web server manual found.
++ OSVDB-3268: /manual/images/: Directory indexing found.
++ OSVDB-3233: /icons/README: Apache default file found.
++ 7915 requests: 0 error(s) and 8 item(s) reported on remote host
++ End Time:           2022-07-22 09:48:22 (GMT-5) (41 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+
+      *********************************************************************
+      Portions of the server's headers (Apache/2.4.38) are not in
+      the Nikto 2.1.6 database or are newer than the known string. Would you like
+      to submit this information (*no server specific data*) to CIRT.net
+      for a Nikto update (or you may email to sullo@cirt.net) (y/n)? 
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The site uses SSL and the Strict-Transport-Security HTTP header is not defined.
++ The site uses SSL and Expect-CT header is not present.
+- Sent updated info to cirt.net -- Thank you!

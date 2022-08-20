@@ -1,0 +1,24 @@
+
+[0;33mRunning a Port scan on [0m192.168.1.81
+[0m
+[0;32mHost is likely running Linux
+
+
+[0;32m---------------------Starting Port Scan-----------------------
+[0m
+In progress: No Scan (0:00:00 elapsed - 0:00:00 remaining)   
+[#>                                                                                                    ] 0% done   
+[2A[0K
+[0K
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+MAC Address: 08:00:27:CF:72:AF (Oracle VirtualBox virtual NIC)
+
+
+
+[0;32m---------------------Finished all scans------------------------
+[0m
+
+[0;33mCompleted in 1 seconds
+[0m
