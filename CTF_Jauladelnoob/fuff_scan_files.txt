@@ -1,0 +1,27 @@
+sudo ffuf -w ~/.user/gitrepos/SecLists/Discovery/Web-Content/raft-medium-files-lowercase.txt -u http://ctf.lajauladelnoob.com/FUZZ -mc 200
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.0.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://ctf.lajauladelnoob.com/FUZZ
+ :: Wordlist         : FUZZ: /home/ozymandias/.user/gitrepos/SecLists/Discovery/Web-Content/raft-medium-files-lowercase.txt
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200
+________________________________________________
+
+[Status: 200, Size: 1978, Words: 54, Lines: 69, Duration: 174ms]
+    * FUZZ: index.php
+
+[Status: 200, Size: 1978, Words: 54, Lines: 69, Duration: 154ms]
+    * FUZZ: .

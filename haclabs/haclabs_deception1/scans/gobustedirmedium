@@ -1,0 +1,9 @@
+/.php                [33m (Status: 403)[0m [Size: 277]
+/.html               [33m (Status: 403)[0m [Size: 277]
+/wordpress           [36m (Status: 301)[0m [Size: 316][34m [--> http://192.168.1.77/wordpress/][0m
+/index.html          [32m (Status: 200)[0m [Size: 11026]
+/javascript          [36m (Status: 301)[0m [Size: 317][34m [--> http://192.168.1.77/javascript/][0m
+/phpmyadmin          [36m (Status: 301)[0m [Size: 317][34m [--> http://192.168.1.77/phpmyadmin/][0m
+/.html               [33m (Status: 403)[0m [Size: 277]
+/.php                [33m (Status: 403)[0m [Size: 277]
+/server-status       [33m (Status: 403)[0m [Size: 277]

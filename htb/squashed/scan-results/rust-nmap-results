@@ -1,0 +1,5 @@
+# Nmap 7.93 scan initiated Sun Apr  2 04:03:34 2023 as: nmap -vvv -p 22,80,111,2049,8000,43215,48357,49029,53201 -sV -A -O -D 1.1.1.1,8.8.8.8 --script vulners -oG rust-nmap-results 10.10.11.191
+# Ports scanned: TCP(9;22,80,111,2049,8000,43215,48357,49029,53201) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.11.191 ()	Status: Up
+Host: 10.10.11.191 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.41 ((Ubuntu))/, 111/open/tcp//rpcbind//2-4 (RPC #100000)/, 2049/open/tcp//nfs_acl//3 (RPC #100227)/, 8000/open/tcp//http//SimpleHTTPServer 0.6 (Python 3.8.10)/, 43215/open/tcp//nlockmgr//1-4 (RPC #100021)/, 48357/open/tcp//mountd//1-3 (RPC #100005)/, 49029/open/tcp//mountd//1-3 (RPC #100005)/, 53201/open/tcp//mountd//1-3 (RPC #100005)/	Seq Index: 264	IP ID Seq: All zeros
+# Nmap done at Sun Apr  2 04:03:48 2023 -- 1 IP address (1 host up) scanned in 14.31 seconds

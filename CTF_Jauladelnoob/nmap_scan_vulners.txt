@@ -1,0 +1,53 @@
+Bug in uptime-agent-info: no string output.
+PORT      STATE    SERVICE      VERSION
+22/tcp    open     tcpwrapped
+| ssh-hostkey: 
+|   2048 8f8e24376b91bea649c1ab200f98f8ef (RSA)
+|   256 f5cb149d51ce0994a487a628f0194e21 (ECDSA)
+|_  256 c77f199a1023d892858c1db99a971195 (ED25519)
+70/tcp    open     tcpwrapped
+|_gopher-ls: 
+79/tcp    open     tcpwrapped
+80/tcp    open     http         Apache httpd 2.4.54 ((Debian))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-title: Signin
+5222/tcp  open     tcpwrapped
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     unknown: 
+|     auth_mechanisms: 
+|     compression_methods: 
+|     capabilities: 
+|     xmpp: 
+|     errors: 
+|       (timeout)
+|_    features: 
+5225/tcp  open     tcpwrapped
+5226/tcp  open     tcpwrapped
+5269/tcp  open     tcpwrapped
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     unknown: 
+|     auth_mechanisms: 
+|     compression_methods: 
+|     capabilities: 
+|     xmpp: 
+|     errors: 
+|       (timeout)
+|_    features: 
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 4.15 - 5.6 (90%), Linux 5.0 (90%), Linux 5.0 - 5.4 (90%), Linux 5.3 - 5.4 (89%), Linux 2.6.32 (89%), Linux 5.0 - 5.3 (89%), Linux 5.4 (88%), Linux 3.1 (88%), Linux 3.2 (88%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+1   104.87 ms host-198-52-127-152-by.multacom.com (198.52.127.152)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 332.53 seconds

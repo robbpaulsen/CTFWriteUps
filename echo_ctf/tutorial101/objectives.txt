@@ -1,0 +1,32 @@
+ Q2: Discovering flags on a target (10 pts)
+
+Flags are hidden everywhere on the targets. The more flags you discover the more points you earn.
+
+Lets check some common locations on tutorial-101.echocity-f.com.
+
+$ curl http://10.0.100.11
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+	<meta name="robots" content="noindex" />
+	<meta name="robots" content="nofollow" />
+	<title>tutorial-101.echocity-f.com</title>
+</head>
+<body>
+Hello there!
+</body>
+<!-- ETSCTF_beefdead -->
+</html>
+
+Go at the top of this page and enter this flag (ETSCTF_beefdead).
+
+It is always a good idea to look for ETSCTF as files, as variables, hidden in comments etc
+
+$ curl http://10.0.100.11/ETSCTF.html
+<html><title>ETSCTF_deadbeef</title></html>
+
+Go again, at the top of this page to claim this flag (ETSCTF_deadbeef).
+
+Enter ETSCTF_FLAGS to complete this step.

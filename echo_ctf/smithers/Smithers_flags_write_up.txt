@@ -1,0 +1,124 @@
+# Smithers machine
+
+# rustscan 10.0.100.142
+
+PORT      STATE SERVICE   REASON         VERSION
+10888/tcp open  http      syn-ack ttl 63 nginx
+|_http-title: Network Tools
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+11211/tcp open  memcached syn-ack ttl 63 Memcached 1.5.12 (uptime 241 seconds)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 5.3 - 5.4 (89%), Linux 4.15 - 5.6 (88%), Linux 5.0 (88%), Linux 5.0 - 5.4 (88%), Linux 2.6.32 (88%), Linux 5.0 - 5.3 (88%), Linux 5.4 (87%), Linux 3.10 - 4.11 (87%), Linux 3.2 - 4.9 (87%), Oracle VM Server 3.4.2 (Linux 4.1) (86%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.93%E=4%D=2/5%OT=10888%CT=%CU=30523%PV=Y%DS=1%DC=T%G=N%TM=63DFD43E%P=x86_64-redhat-linux-gnu)
+SEQ(SP=105%GCD=1%ISR=108%TI=Z%CI=RI%II=I%TS=A)
+OPS(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW7%O6=M54DST11)
+WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)
+ECN(R=Y%DF=N%T=40%W=FAF0%O=M54DNNSNW7%CC=Y%Q=)
+T1(R=Y%DF=N%T=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%T=41%W=0%S=A%A=S%F=AR%O=%RD=0%Q=)
+T5(R=Y%DF=N%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=41%W=0%S=A%A=S%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 19.224 days (since Tue Jan 17 04:44:27 2023)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   156.61 ms 10.0.100.142
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 10:07
+Completed NSE at 10:07, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 10:07
+Completed NSE at 10:07, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 10:07
+Completed NSE at 10:07, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 21.20 seconds
+           Raw packets sent: 66 (4.556KB) | Rcvd: 40 (3.000KB)
+
+# there is a hidden flag on the memcache service, to interact with this services are very similiar to APIs, it can be done via TELNET or just use
+a variant of netcat, the the connection swissarmy tool,
+** nc 10.0.100.142 11211
+
+# VERY IMPROTANT YOU WILL NOT HAVE AN INTERACTIVE SESSION IT SEEMS LIKE ITS JUST STUCK BUT YOU ARE ALREADY THERE, EXPLORE WITH:
+1. stats
+stats
+STAT pid 23
+STAT uptime 1086
+STAT time 1675614077
+STAT version 1.5.12
+STAT libevent 2.1.11-stable
+STAT pointer_size 64
+STAT rusage_user 0.111819
+STAT rusage_system 0.103108
+STAT max_connections 1024
+STAT curr_connections 2
+STAT total_connections 123
+STAT rejected_connections 0
+STAT connection_structures 4
+2. stats items
+STAT items:2:number 1
+STAT items:2:number_hot 0
+STAT items:2:number_warm 0
+STAT items:2:number_cold 1
+STAT items:2:age_hot 0
+STAT items:2:age_warm 0
+STAT items:2:age 26
+STAT items:2:evicted 0
+STAT items:2:evicted_nonzero 0
+STAT items:2:evicted_time 0
+STAT items:2:outofmemory 0
+STAT items:2:tailrepairs 0
+STAT items:2:reclaimed 0
+3. stats cachedump <# of item> <and add a limit number for results output>
+ITEM ETSCTF [39 b; 1678206376 s]
+END
+4. to select and read a memcache session dump is as follows:
+$ get <the session cached memory name>
+VALUE ETSCTF 0 39
+ETSCTF_8a2c2104e528d3183669477f6a367105
+END
+
+
+
+# curl 10.0.100.142:1088
+
+curl 10.0.100.142:10888
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Network Tools</title>
+</head>
+<body>
+<h1>Network Utilities</h1>
+These utilities are only available to authorized IP's only. If you need access to this page contact the administrator to update the ACL.
+<pre>
+Server's version: 1.5.12
+Visitor REMOTE_ADDR: 10.10.0.222
+REMOTE_ADDR value not found on key.
+You are not authorized to access this resource
+  </body>
+</html>
+
+FLASGS:
+/root/ETSCTF_6cb83c6be1cafd5e8a936f353526b96e
+/ETSCTF_901a6a049cd0f33fd124f7aba765496c
+network-tools.php://$memcache->connect('172.17.0.2', 11211) or die ("Could not connect. Get ETSCTF_cba876e14fefed4646c123dc9291aa68");
+network-tools.php:$memcache->addServer("127.0.0.1", 11211) or die ("Could not add memcached server. Get ETSCTF_cba876e14fefed4646c123dc9291aa68");
+ETSCTF_6c1f5ac2df829f0141124fcf6fb94390
+ETSCTF_3f6e5b24283eb7d0450ced57471d34ac

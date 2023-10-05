@@ -1,0 +1,20 @@
+<html>
+<body>
+<script>
+var count = 1;
+function myFunction() {
+  if (count<15) {
+    var input = document.getElementById("uname").value;
+    alert("clicks left for noob "+ input +":"+ (50-count));
+    count++;
+  }
+  else {
+   window.location="admindelete.html";
+  }
+};
+</script>
+  <input type="text" id="uname" placeholder="your name"</input>
+  <br>
+  <button onclick="myFunction()">show quest</button>
+</body>
+</html>

@@ -1,0 +1,46 @@
+# Box Deception no_name
+
+Arp-scan
+IP: 192.168.1.120
+Port:
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+
+"====================================================================
+
+Os ID Ubuntu running Apache2 HTTPD server.
+
+Curl Index.html :
+<h4>Fake Admin Area</h4>
+<form action="index.php" method="post">
+<input type="text" placeholder="fake query" name="box">
+<input type="submit" placeholder="Run" value="submit" name="submitt">
+</form>
+
+Fake ping executed
+
+"====================================================================
+
+http://192.168.1.120/index.php
+
+Main Servers page show a submit box , for a fake ping directly
+to the box as sql consult.
+
+Testing SQLi
+
+## SIDE NOTE TO GREP SPECIFIC OUTPUT THROUGH Curl
+curl -s http://192.168.1.120 | grep -i <word>
+
+"====================================================================
+
+scan with gobuster discovers 3 codes "200":
+/admin
+/index.php
+/superadmin.php
+
+Curl admin page reveals:
+
+<!--passphrase:harder-->
+
+

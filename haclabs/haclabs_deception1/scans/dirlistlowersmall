@@ -1,0 +1,26 @@
+/.php                [33m (Status: 403)[0m [Size: 277]
+/templates           [33m (Status: 403)[0m [Size: 277]
+/.html               [33m (Status: 403)[0m [Size: 277]
+/themes              [36m (Status: 301)[0m [Size: 324][34m [--> http://192.168.1.77/phpmyadmin/themes/][0m
+/themes.php          [32m (Status: 200)[0m [Size: 10532]
+/doc                 [36m (Status: 301)[0m [Size: 321][34m [--> http://192.168.1.77/phpmyadmin/doc/][0m
+/license.php         [32m (Status: 200)[0m [Size: 10533]
+/navigation.php      [32m (Status: 200)[0m [Size: 10536]
+/index.php           [32m (Status: 200)[0m [Size: 10531]
+/js                  [36m (Status: 301)[0m [Size: 320][34m [--> http://192.168.1.77/phpmyadmin/js/][0m
+/logout.php          [32m (Status: 200)[0m [Size: 10532]
+/libraries           [33m (Status: 403)[0m [Size: 277]
+/url.php             [36m (Status: 302)[0m [Size: 0][34m [--> /phpmyadmin/][0m
+/changelog.php       [32m (Status: 200)[0m [Size: 10535]
+/export.php          [32m (Status: 200)[0m [Size: 10532]
+/setup               [33m (Status: 401)[0m [Size: 459]
+/sql                 [36m (Status: 301)[0m [Size: 321][34m [--> http://192.168.1.77/phpmyadmin/sql/][0m
+/sql.php             [32m (Status: 200)[0m [Size: 10529]
+/locale              [36m (Status: 301)[0m [Size: 324][34m [--> http://192.168.1.77/phpmyadmin/locale/][0m
+/import.php          [32m (Status: 200)[0m [Size: 10532]
+/lint.php            [32m (Status: 200)[0m [Size: 48]
+/.html               [33m (Status: 403)[0m [Size: 277]
+/.php                [33m (Status: 403)[0m [Size: 277]
+/server_status.php   [32m (Status: 200)[0m [Size: 10539]
+/phpinfo.php         [32m (Status: 200)[0m [Size: 10533]
+/db_search.php       [32m (Status: 200)[0m [Size: 10535]

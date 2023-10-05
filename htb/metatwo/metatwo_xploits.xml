@@ -1,0 +1,101 @@
+---------------------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                                    |  Path
+---------------------------------------------------------------------------------- ---------------------------------
+Debian [01;31m[KOpenSSH[m[K - (Authenticated) Remote SELinux Privilege Escalation              | linux/remote/6094.txt
+Dropbear / [01;31m[KOpenSSH[m[K Server - 'MAX_UNAUTH_CLIENTS' Denial of Service                | multiple/dos/1572.pl
+FreeBSD [01;31m[KOpenSSH[m[K 3.5p1 - Remote Command Execution                                  | freebsd/remote/17462.txt
+glibc-2.2 / [01;31m[Kopenssh[m[K-2.3.0p1 / glibc 2.1.9x - File Read                            | linux/local/258.sh
+Novell Netware 6.5 - [01;31m[KOpenSSH[m[K Remote Stack Overflow                                | novell/dos/14866.txt
+[01;31m[KOpenSSH[m[K 1.2 - '.scp' File Create/Overwrite                                        | linux/remote/20253.sh
+[01;31m[KOpenSSH[m[K 2.3 < 7.7 - Username Enumeration                                          | linux/remote/45233.py
+[01;31m[KOpenSSH[m[K 2.3 < 7.7 - Username Enumeration (PoC)                                    | linux/remote/45210.py
+[01;31m[KOpenSSH[m[K 2.x/3.0.1/3.0.2 - Channel Code Off-by-One                                 | unix/remote/21314.txt
+[01;31m[KOpenSSH[m[K 2.x/3.x - Kerberos 4 TGT/AFS Token Buffer Overflow                        | linux/remote/21402.txt
+[01;31m[KOpenSSH[m[K 3.x - Challenge-Response Buffer Overflow (1)                              | unix/remote/21578.txt
+[01;31m[KOpenSSH[m[K 3.x - Challenge-Response Buffer Overflow (2)                              | unix/remote/21579.txt
+[01;31m[KOpenSSH[m[K 4.3 p1 - Duplicated Block Remote Denial of Service                        | multiple/dos/2444.sh
+[01;31m[KOpenSSH[m[K 6.8 < 6.9 - 'PTY' Local Privilege Escalation                              | linux/local/41173.c
+[01;31m[KOpenSSH[m[K 7.2 - Denial of Service                                                   | linux/dos/40888.py
+[01;31m[KOpenSSH[m[K 7.2p1 - (Authenticated) xauth Command Injection                           | multiple/remote/39569.py
+[01;31m[KOpenSSH[m[K 7.2p2 - Username Enumeration                                              | linux/remote/40136.py
+[01;31m[KOpenSSH[m[K < 6.6 SFTP (x64) - Command Execution                                      | linux_x86-64/remote/45000.c
+[01;31m[KOpenSSH[m[K < 6.6 SFTP - Command Execution                                            | linux/remote/45001.py
+[01;31m[KOpenSSH[m[K < 7.4 - 'UsePrivilegeSeparation Disabled' Forwarded Unix Domain Sockets P | linux/local/40962.txt
+[01;31m[KOpenSSH[m[K < 7.4 - agent Protocol Arbitrary Library Loading                          | linux/remote/40963.txt
+[01;31m[KOpenSSH[m[K < 7.7 - User Enumeration (2)                                              | linux/remote/45939.py
+[01;31m[KOpenSSH[m[K SCP Client - Write Arbitrary Files                                        | multiple/remote/46516.py
+[01;31m[KOpenSSH[m[K/PAM 3.6.1p1 - 'gossh.sh' Remote Users Ident                               | linux/remote/26.sh
+[01;31m[KOpenSSH[m[K/PAM 3.6.1p1 - Remote Users Discovery Tool                                 | linux/remote/25.c
+[01;31m[KOpenSSH[m[Kd 7.2p2 - Username Enumeration                                             | linux/remote/40113.txt
+Portable [01;31m[KOpenSSH[m[K 3.6.1p-PAM/4.1-SuSE - Timing Attack                              | multiple/remote/3303.sh
+---------------------------------------------------------------------------------- ---------------------------------
+Shellcodes: No Results
+
+
+---------------------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                                    |  Path
+---------------------------------------------------------------------------------- ---------------------------------
+[01;31m[KNginx[m[K (Debian Based Distros + Gentoo) - 'logrotate' Local Privilege Escalation    | linux/local/40768.sh
+[01;31m[KNginx[m[K 0.6.36 - Directory Traversal                                                | multiple/remote/12804.txt
+[01;31m[KNginx[m[K 0.6.38 - Heap Corruption                                                    | linux/local/14830.py
+[01;31m[KNginx[m[K 0.6.x - Arbitrary Code Execution NullByte Injection                         | multiple/webapps/24967.txt
+[01;31m[KNginx[m[K 0.7.0 < 0.7.61 / 0.6.0 < 0.6.38 / 0.5.0 < 0.5.37 / 0.4.0 < 0.4.14 - Denial  | linux/dos/9901.txt
+[01;31m[KNginx[m[K 0.7.61 - WebDAV Directory Traversal                                         | multiple/remote/9829.txt
+[01;31m[KNginx[m[K 0.7.64 - Terminal Escape Sequence in Logs Command Injection                 | multiple/remote/33490.txt
+[01;31m[KNginx[m[K 0.7.65/0.8.39 (dev) - Source Disclosure / Download                          | windows/remote/13822.txt
+[01;31m[KNginx[m[K 0.8.36 - Source Disclosure / Denial of Service                              | windows/remote/13818.txt
+[01;31m[KNginx[m[K 1.1.17 - URI Processing SecURIty Bypass                                     | multiple/remote/38846.txt
+[01;31m[KNginx[m[K 1.20.0 - Denial of Service (DOS)                                            | multiple/remote/50973.py
+[01;31m[KNginx[m[K 1.3.9 < 1.4.0 - Chuncked Encoding Stack Buffer Overflow (Metasploit)        | linux/remote/25775.rb
+[01;31m[KNginx[m[K 1.3.9 < 1.4.0 - Denial of Service (PoC)                                     | linux/dos/25499.py
+[01;31m[KNginx[m[K 1.3.9/1.4.0 (x86) - Brute Force                                             | linux_x86/remote/26737.pl
+[01;31m[KNginx[m[K 1.4.0 (Generic Linux x64) - Remote Overflow                                 | linux_x86-64/remote/32277.txt
+PHP-FPM + [01;31m[KNginx[m[K - Remote Code Execution                                           | php/webapps/47553.md
+---------------------------------------------------------------------------------- ---------------------------------
+Shellcodes: No Results
+
+
+---------------------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                                    |  Path
+---------------------------------------------------------------------------------- ---------------------------------
+FreeBSD - '[01;31m[Kft[m[Kpd / [01;31m[KProFTPd[m[K' Remote Command Execution                               | freebsd/remote/18181.txt
+[01;31m[KProFTPd[m[K - '[01;31m[Kft[m[Kpdctl' 'pr_ctrls_connect' Local Overflow                             | linux/local/394.c
+[01;31m[KProFTPd[m[K - 'mod_mysql' Authentication Bypass                                       | multiple/remote/8037.txt
+[01;31m[KProFTPd[m[K - 'mod_s[01;31m[Kft[m[Kp' Integer Overflow Denial of Service (PoC)                     | linux/dos/16129.txt
+[01;31m[KProFTPd[m[K 1.2 - 'SIZE' Remote Denial of Service                                     | linux/dos/20536.java
+[01;31m[KProFTPd[m[K 1.2 < 1.3.0 (Linux) - 'sreplace' Remote Buffer Overflow (Metasploit)      | linux/remote/16852.rb
+[01;31m[KProFTPd[m[K 1.2 pre1/pre2/pre3/pre4/pre5 - Remote Buffer Overflow (1)                 | linux/remote/19475.c
+[01;31m[KProFTPd[m[K 1.2 pre1/pre2/pre3/pre4/pre5 - Remote Buffer Overflow (2)                 | linux/remote/19476.c
+[01;31m[KProFTPd[m[K 1.2 pre6 - 'snprintf' Remote Root                                         | linux/remote/19503.txt
+[01;31m[KProFTPd[m[K 1.2.0 pre10 - Remote Denial of Service                                    | linux/dos/244.java
+[01;31m[KProFTPd[m[K 1.2.0 rc2 - Memory Leakage                                                | linux/dos/241.c
+[01;31m[KProFTPd[m[K 1.2.10 - Remote Users Enumeration                                         | linux/remote/581.c
+[01;31m[KProFTPd[m[K 1.2.7 < 1.2.9rc2 - Remote Code Execution / Brute Force                    | linux/remote/110.c
+[01;31m[KProFTPd[m[K 1.2.7/1.2.8 - '.ASCII' File Transfer Buffer Overrun                       | linux/dos/23170.c
+[01;31m[KProFTPd[m[K 1.2.9 RC1 - 'mod_sql' SQL Injection                                       | linux/remote/43.pl
+[01;31m[KProFTPd[m[K 1.2.9 rc2 - '.ASCII' File Remote Code Execution (1)                       | linux/remote/107.c
+[01;31m[KProFTPd[m[K 1.2.9 rc2 - '.ASCII' File Remote Code Execution (2)                       | linux/remote/3021.txt
+[01;31m[KProFTPd[m[K 1.2.x - 'STAT' Denial of Service                                          | linux/dos/22079.sh
+[01;31m[KProFTPd[m[K 1.3 - 'mod_sql' 'Username' SQL Injection                                  | multiple/remote/32798.pl
+[01;31m[KProFTPd[m[K 1.3.0 (OpenSUSE) - 'mod_ctrls' Local Stack Overflow                       | unix/local/10044.pl
+[01;31m[KProFTPd[m[K 1.3.0 - 'sreplace' Remote Stack Overflow (Metasploit)                     | linux/remote/2856.pm
+[01;31m[KProFTPd[m[K 1.3.0/1.3.0a - 'mod_ctrls' 'support' Local Buffer Overflow (1)            | linux/local/3330.pl
+[01;31m[KProFTPd[m[K 1.3.0/1.3.0a - 'mod_ctrls' 'support' Local Buffer Overflow (2)            | linux/local/3333.pl
+[01;31m[KProFTPd[m[K 1.3.0/1.3.0a - 'mod_ctrls' exec-shield Local Overflow                     | linux/local/3730.txt
+[01;31m[KProFTPd[m[K 1.3.0a - 'mod_ctrls' 'support' Local Buffer Overflow (PoC)                | linux/dos/2928.py
+[01;31m[KProFTPd[m[K 1.3.2 rc3 < 1.3.3b (FreeBSD) - Telnet IAC Buffer Overflow (Metasploit)    | linux/remote/16878.rb
+[01;31m[KProFTPd[m[K 1.3.2 rc3 < 1.3.3b (Linux) - Telnet IAC Buffer Overflow (Metasploit)      | linux/remote/16851.rb
+[01;31m[KProFTPd[m[K 1.3.3c - Compromised Source Backdoor Remote Code Execution                | linux/remote/15662.txt
+[01;31m[KProFTPd[m[K 1.3.5 - 'mod_copy' Command Execution (Metasploit)                         | linux/remote/37262.rb
+[01;31m[KProFTPd[m[K 1.3.5 - 'mod_copy' Remote Command Execution                               | linux/remote/36803.py
+[01;31m[KProFTPd[m[K 1.3.5 - 'mod_copy' Remote Command Execution (2)                           | linux/remote/49908.py
+[01;31m[KProFTPd[m[K 1.3.5 - File Copy                                                         | linux/remote/36742.txt
+[01;31m[KProFTPD[m[K 1.3.7a - Remote Denial of Service                                         | multiple/dos/49697.py
+[01;31m[KProFTPd[m[K 1.x - 'mod_tls' Remote Buffer Overflow                                    | linux/remote/4312.c
+[01;31m[KProFTPd[m[K IAC 1.3.x - Remote Command Execution                                      | linux/remote/15449.pl
+[01;31m[KProFTPd[m[K-1.3.3c - Backdoor Command Execution (Metasploit)                          | linux/remote/16921.rb
+WU-[01;31m[KFT[m[KPD 2.4.2 / SCO Open Server 5.0.5 / [01;31m[KProFTPd[m[K 1.2 pre1 - 'realpath' Remote Buff | linux/remote/19086.c
+WU-[01;31m[KFT[m[KPD 2.4.2 / SCO Open Server 5.0.5 / [01;31m[KProFTPd[m[K 1.2 pre1 - 'realpath' Remote Buff | linux/remote/19087.c
+WU-[01;31m[KFT[m[KPD 2.4/2.5/2.6 / Trolltech [01;31m[Kft[m[Kpd 1.2 / [01;31m[KProFTPd[m[K 1.2 / Bero[01;31m[KFT[m[KPD 1.3.4 [01;31m[KFT[m[KP - glo | linux/remote/20690.sh
+---------------------------------------------------------------------------------- ---------------------------------
+Shellcodes: No Results

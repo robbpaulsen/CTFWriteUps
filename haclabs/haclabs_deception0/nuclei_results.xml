@@ -1,0 +1,19 @@
+[[36m2022-10-26 17:24:21[0m] [[92mapache-detect[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120 [[96mApache/2.4.29 (Ubuntu)[0m]
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92mcross-origin-resource-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92maccess-control-expose-headers[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92mcontent-security-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92mx-permitted-cross-domain-policies[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92maccess-control-max-age[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92mstrict-transport-security[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92mx-frame-options[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92mreferrer-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92mcross-origin-embedder-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92maccess-control-allow-origin[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92maccess-control-allow-credentials[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92mpermissions-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92mx-content-type-options[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92mclear-site-data[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92mcross-origin-opener-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92maccess-control-allow-methods[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:21[0m] [[92mhttp-missing-security-headers[0m:[1;92maccess-control-allow-headers[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120
+[[36m2022-10-26 17:24:54[0m] [[92mwaf-detect[0m:[1;92mapachegeneric[0m] [[94mhttp[0m] [[34minfo[0m] http://192.168.1.120/

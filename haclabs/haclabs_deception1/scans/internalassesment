@@ -1,0 +1,17 @@
+#!/bin/bash
+
+clear
+echo "About to perform arp-scan of all network addresses and a Recon for vulnerabilities inside the Network!!"
+
+sleep 3
+
+echo "Performing local Arp-Scan, Detailing the info for no DUPs and Presentable"
+
+sleep 2
+
+sudo arp-scan -l -v | awk '{print $1}' | grep 192.* |  sort | uniq  > addressestoscan.json && sudo nmap -sS -sC -sV -O -p- -D 1.1.1.1,8.8.8.8 -iL addressestoscan.json -oX LocalNetReport
+
+sleep 2
+
+echo "Your Report is Wating For You now just evaluate the report and make something Actionable"
+

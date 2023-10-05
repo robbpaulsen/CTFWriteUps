@@ -1,0 +1,73 @@
+ffuf descubre login pho admin page, y viendo el source de la pagina esta hard codeado al user y password
+
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        background-color: #151D2B;
+    }
+
+    form {
+        background-color: #1A2332;
+        width: 25%;
+        margin: auto;
+        border-radius: 10px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input[type=text],
+    input[type=password] {
+        background-color: #101927;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #101927;
+        box-sizing: border-box;
+        border-radius: 10px;
+        color: white;
+    }
+
+    button {
+        background-color: #2A86FF;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    .container {
+        padding: 16px;
+    }
+</style>
+
+<body>
+                <form name='login' autocomplete='off' class='form' action='' method='post'>
+            <div class='control'>
+                <h1>
+                    Admin Panel
+                </h1>
+            </div>
+            <div class="container">
+                <label for="username"><b>Username</b></label>
+                <input name='username' placeholder='Username' type='text'>
+
+                <label for="password"><b>Password</b></label>
+                <input name='password' placeholder='Password' type='password'>
+
+                <!-- TODO: remove test credentials admin:password123 -->
+
+                <button type="submit" formmethod='post'>Login</button>
+            </div>
+        </form>
+    </body>
+
+</html>HTB{w3b_3num3r4710n_r3v34l5_53cr375}

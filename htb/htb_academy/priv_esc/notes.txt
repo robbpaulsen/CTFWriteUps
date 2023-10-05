@@ -1,0 +1,28 @@
+* ssh creds user= user1 password= password1
+
+id:
+uid=1000(user1) gid=1000(user1) groups=1000(user1)
+
+env:
+SHELL=/bin/bash
+PWD=/home/user1
+LOGNAME=user1
+MOTD_SHOWN=pam
+HOME=/home/user1
+SSH_CONNECTION=159.65.95.114 35517 10.244.3.139 80
+TERM=xterm
+USER=user1
+SHLVL=1
+SSH_CLIENT=159.65.95.114 35517 80
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+SSH_TTY=/dev/pts/0
+_=/usr/bin/env
+
+sudo -l :
+atching Defaults entries for user1 on gettingstartedprivesc-749910-58b7d69749-9j6dx:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User user1 may run the following commands on gettingstartedprivesc-749910-58b7d69749-9j6dx:
+    (user2 : user2) NOPASSWD: /bin/bash
+
+

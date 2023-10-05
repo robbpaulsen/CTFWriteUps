@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Tue Oct 25 23:19:38 2022 as: nmap -sS -sC -sV -O -p- -D 8.8.8.8 -oX deceptionscan0 192.168.1.77 -->
+<nmaprun scanner="nmap" args="nmap -sS -sC -sV -O -p- -D 8.8.8.8 -oX deceptionscan0 192.168.1.77" start="1666757978" startstr="Tue Oct 25 23:19:38 2022" version="7.93" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.77" addrtype="ipv4"/>
+<address addr="08:00:27:58:85:6E" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1666757979" endtime="1666757987"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.77" addrtype="ipv4"/>
+<address addr="08:00:27:58:85:6E" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="reset" count="65533" proto="tcp" ports="1-21,23-79,81-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 9dd098da0d323d0b3f424dd7934ffd60 (RSA)&#xa;  256 4cf42e2482cf9c8de20c524b2ea512d9 (ECDSA)&#xa;  256 a9fbe3f4bad61e72e7972582876eea01 (ED25519)"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDLSsGJtpg5KvawG56yanORlHOGP7anzFKXq8ZDjuBD20sWrHl6g0J1+w497SyvRnB6EDOBGrjqlEXqlI7DvgrAo08GOCvoajuPpitLuC2rCfRC3b3ctn/n2+zGkkfsD5Y0U6PQrchRNpMKH/4nsaBcrTV8ZkEGF+VNYhnTO7c1vGhpH0i5c7UzyKvfqz/KzH4YryUpC1opxB9pn0jHH+iQ8H+Brne/bvOmpyvoy84CzuunshxMmAV9qdaLmZxOOF25SF5uHh6r1h8tVG8yLbD1N7IfPXXy0GpZZZIBt4i/ZQVpfk1i0GsY4/mL3VCrtFsO4p2PxRLVws5Fpces+pDN</elem>
+<elem key="fingerprint">9dd098da0d323d0b3f424dd7934ffd60</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDwKM2aO1LW/C4gfLHyFmkrfcPcXVHvIEK8JN9pk/9kNhZKz8X9byyxiWMnNS/6AQNMAV0d5B+d0/VK2eps90ZI=</elem>
+<elem key="fingerprint">4cf42e2482cf9c8de20c524b2ea512d9</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIEOULyvRe2blVRaHM9twRKyE34SQUyGPMjVmRv2srgvv</elem>
+<elem key="fingerprint">a9fbe3f4bad61e72e7972582876eea01</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-title" output="Apache2 Ubuntu Default Page: It works"><elem key="title">Apache2 Ubuntu Default Page: It works</elem>
+</script><script id="http-server-header" output="Apache/2.4.29 (Ubuntu)"><elem>Apache/2.4.29 (Ubuntu)</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="37983"/>
+<osmatch name="Linux 4.15 - 5.6" accuracy="100" line="67238">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="178126" lastboot="Sun Oct 23 21:51:01 2022"/>
+<distance value="1"/>
+<tcpsequence index="261" difficulty="Good luck!" values="DD243D11,3D29AE8E,8633B9ED,748BFAD2,44D40390,D0A121E5"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="A9DFB86,A9DFBEA,A9DFC4E,A9DFCB2,A9DFD16,A9DFD7A"/>
+<times srtt="151" rttvar="22" to="100000"/>
+</host>
+<runstats><finished time="1666757987" timestr="Tue Oct 25 23:19:47 2022" summary="Nmap done at Tue Oct 25 23:19:47 2022; 1 IP address (1 host up) scanned in 9.16 seconds" elapsed="9.16" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

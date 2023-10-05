@@ -1,0 +1,6 @@
+Did you know that cron was invented by Brian Kernighan, co-author of the C
+programming language? There is much confusion about what cron means. Most
+people assume it is derived from Chronos, which is greek for time. Of
+course to be really sure, someone would have to ask Brian Kernighan, who is
+currently a professor at Princeton University.
+/var/.info22.txt 

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Thu Mar 16 03:17:57 2023 as: nmap -vvv -p 3306 -sV -sC -O -oX hackthebox.xml 10.129.77.151 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 3306 -sV -sC -O -oX hackthebox.xml 10.129.77.151" start="1678958277" startstr="Thu Mar 16 03:17:57 2023" version="7.93" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="3306"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1678958277"/>
+<taskend task="NSE" time="1678958277"/>
+<taskbegin task="NSE" time="1678958277"/>
+<taskend task="NSE" time="1678958277"/>
+<taskbegin task="NSE" time="1678958277"/>
+<taskend task="NSE" time="1678958277"/>
+<taskbegin task="Ping Scan" time="1678958277"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.129.77.151" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1678958277" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1678958277"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1678958277"/>
+<taskbegin task="SYN Stealth Scan" time="1678958277"/>
+<taskend task="SYN Stealth Scan" time="1678958277" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1678958277"/>
+<taskend task="Service scan" time="1678958437" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1678958441"/>
+<taskend task="NSE" time="1678958462"/>
+<taskbegin task="NSE" time="1678958462"/>
+<taskend task="NSE" time="1678958484"/>
+<taskbegin task="NSE" time="1678958484"/>
+<taskend task="NSE" time="1678958484"/>
+<host starttime="1678958277" endtime="1678958484"><status state="up" reason="reset" reason_ttl="63"/>
+<address addr="10.129.77.151" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mysql" method="table" conf="3"/><script id="mysql-info" output="&#xa;  Protocol: 10&#xa;  Version: 5.5.5-10.3.27-MariaDB-0+deb10u1&#xa;  Thread ID: 67&#xa;  Capabilities flags: 63486&#xa;  Some Capabilities: InteractiveClient, SupportsLoadDataLocal, Support41Auth, ConnectWithDatabase, Speaks41ProtocolOld, DontAllowDatabaseTableColumn, SupportsTransactions, LongColumnFlag, IgnoreSigpipes, FoundRows, Speaks41ProtocolNew, IgnoreSpaceBeforeParenthesis, ODBCClient, SupportsCompression, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments&#xa;  Status: Autocommit&#xa;  Salt: p.1Kf@I2[V|/rp[V}75D&#xa;  Auth Plugin Name: mysql_native_password"><elem key="Protocol">10</elem>
+<elem key="Version">5.5.5-10.3.27-MariaDB-0+deb10u1</elem>
+<elem key="Thread ID">67</elem>
+<elem key="Capabilities flags">63486</elem>
+<table key="Some Capabilities">
+<elem>InteractiveClient</elem>
+<elem>SupportsLoadDataLocal</elem>
+<elem>Support41Auth</elem>
+<elem>ConnectWithDatabase</elem>
+<elem>Speaks41ProtocolOld</elem>
+<elem>DontAllowDatabaseTableColumn</elem>
+<elem>SupportsTransactions</elem>
+<elem>LongColumnFlag</elem>
+<elem>IgnoreSigpipes</elem>
+<elem>FoundRows</elem>
+<elem>Speaks41ProtocolNew</elem>
+<elem>IgnoreSpaceBeforeParenthesis</elem>
+<elem>ODBCClient</elem>
+<elem>SupportsCompression</elem>
+<elem>SupportsAuthPlugins</elem>
+<elem>SupportsMultipleResults</elem>
+<elem>SupportsMultipleStatments</elem>
+</table>
+<elem key="Status">Autocommit</elem>
+<elem key="Salt">p.1Kf@I2[V|/rp[V}75D</elem>
+<elem key="Auth Plugin Name">mysql_native_password</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="3306"/>
+<portused state="closed" proto="udp" portid="30429"/>
+<osmatch name="Linux 5.0" accuracy="97" line="68042">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="97"><cpe>cpe:/o:linux:linux_kernel:5.0</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.15 - 5.6" accuracy="95" line="67238">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.3 - 5.4" accuracy="95" line="68140">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="95" line="55653">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.0 - 5.3" accuracy="95" line="68082">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.1" accuracy="95" line="62917">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2" accuracy="95" line="64664">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+</osmatch>
+<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61815">
+<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+</osmatch>
+<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93" line="8398">
+<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="93"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="93" line="64171">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.93%E=4%D=3/16%OT=3306%CT=%CU=30429%PV=Y%DS=2%DC=I%G=N%TM=6412DF94%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=106%GCD=1%ISR=10D%TI=Z%CI=Z%II=I%TS=A)&#xa;OPS(O1=M53CST11NW7%O2=M53CST11NW7%O3=M53CNNT11NW7%O4=M53CST11NW7%O5=M53CST11NW7%O6=M53CST11)&#xa;WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)&#xa;ECN(R=Y%DF=Y%T=40%W=FAF0%O=M53CNNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="721523" lastboot="Tue Mar  7 18:56:01 2023"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="A181FF5A,6293D37D,58316C61,CA3831FA,68D5D5D7,D240CAFF"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="2B00E465,2B00E4CA,2B00E52D,2B00E590,2B00E5F9,2B00E659"/>
+<times srtt="88139" rttvar="1698" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1678958484"/>
+<taskend task="NSE" time="1678958484"/>
+<taskbegin task="NSE" time="1678958484"/>
+<taskend task="NSE" time="1678958484"/>
+<taskbegin task="NSE" time="1678958484"/>
+<taskend task="NSE" time="1678958484"/>
+<runstats><finished time="1678958484" timestr="Thu Mar 16 03:21:24 2023" summary="Nmap done at Thu Mar 16 03:21:24 2023; 1 IP address (1 host up) scanned in 207.44 seconds" elapsed="207.44" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

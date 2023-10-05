@@ -1,0 +1,8 @@
+/.php                [33m (Status: 403)[0m [Size: 277]
+/.html               [33m (Status: 403)[0m [Size: 277]
+/messages.php        [32m (Status: 200)[0m [Size: 29261]
+/whitelist.php       [32m (Status: 200)[0m [Size: 2061]
+/pmd                 [36m (Status: 301)[0m [Size: 324][34m [--> http://192.168.1.77/phpmyadmin/js/pmd/][0m
+/.php                [33m (Status: 403)[0m [Size: 277]
+/.html               [33m (Status: 403)[0m [Size: 277]
+/jquery              [36m (Status: 301)[0m [Size: 327][34m [--> http://192.168.1.77/phpmyadmin/js/jquery/][0m

